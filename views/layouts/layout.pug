@@ -11,7 +11,7 @@ html
     body
         header#header
             nav.navbar.navbar-expand-lg.navbar-light.bg-light
-                a.navbar-brand(href='#') Mobile Shop
+                a.navbar-brand(href='/') Mobile Shop
                 button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                     span.navbar-toggler-icon
                 #navbarSupportedContent.collapse.navbar-collapse
@@ -29,4 +29,50 @@ html
                         input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
                         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
         block content
-        block scripts
+        footer#foter.bg-dark.text-white.py-5
+            .container
+                .row
+                    .col-lg-3
+                        h4.font-rubik.font-size-20 Mobile Shopee
+                        p.font-size-14.font-rale.text-white-50
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis non iste sequi cupiditate tempora iure. Velit accusamus saepe harum sed.
+                    .col-lg-4.col-12
+                        h4.font-rubik.font-size-20 Newslatter
+                        form.form-row
+                            .col
+                                input.form-control(type='text', placeholder='Email*')
+                            .col
+                                button.btn.btn-primary.md-2(type='submit') Subcribe
+                    .col-lg-2.col-12
+                        h4.font-rubik.font-size-20 Information
+                        .d-flex.flex-column.flex-wrap
+                        a.font-rale.font-size-14.text-white-50.pb-1(href='#') About Us
+                        br
+                        a.font-rale.font-size-14.text-white-50.pb-1(href='#') Delivery Information
+                        br
+                        a.font-rale.font-size-14.text-white-50.pb-1(href='#') Privacy Policy
+                        br
+                        a.font-rale.font-size-14.text-white-50.pb-1(href='#') Teams &amp; Conditions
+                    .col-lg-2.col-12
+                        h4.font-rubik.font-size-20 Accout
+                        .d-flex.flex-column.flex-wrap
+                        a.font-rale.font-size-14.text-white-50.pb-1(href='#') My Accout
+                        br
+                        a.font-rale.font-size-14.text-white-50.pb-1(href='#') Order History
+                        br
+                        a.font-rale.font-size-14.text-white-50.pb-1(href='#') Wish List
+                        br
+                        a.font-rale.font-size-14.text-white-50.pb-1(href='#') Newslatters
+        .coppyright.text-center.bg-dark.text-white.py-2.font-size-14
+            p
+                | &copy;Copyrights 2020. Desing By 
+                a.color-second(href='https://www.facebook.com/binh.t.phan.73', style='text-decoration: none', target='_blank') Phan Binh
+                |  and 
+                i.fa.fa-heart.text-danger
+        script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
+        script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo', crossorigin='anonymous')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', integrity='sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', integrity='sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js', integrity='sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js', integrity='sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==', crossorigin='anonymous')
+        script(src="/script.js")

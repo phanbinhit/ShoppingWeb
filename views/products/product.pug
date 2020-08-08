@@ -1,0 +1,111 @@
+extends ../layouts/layout
+
+block content
+    main#main-site
+        section#product
+            .container.py-5
+                .row
+                    .col-sm-6
+                        img#main-product.img-fluid(src=product.pathImage, alt='Product')
+                        .form-row.font-size-16.pt-4.font-baloo
+                            .col
+                                button.btn.btn-danger.text-white.form-control(type='submit') Proceed to Buy
+                            .col
+                                button.btn.btn-warning.text-dark.form-control(type='submit') Add to Card
+                    .col-sm-6
+                        h5.font-baloo.font-size-20.pt-5=product.title
+                        small= 'by ' + product.author
+                        .d-flex
+                            .rating.text-warning.font-size-14
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                            a.font-size-14.font-rale.px-2(href='#', style='color: #007bff') 20,534 ratings | 1000+ answered questions
+                        hr.m-0
+                        table.my-3
+                            tr.font-rale.font-size-14
+                                td M.R.P:
+                                td
+                                    small
+                                        strike $162.00
+                            tr.font-rale.font-size-14
+                                td Deal Price:
+                                td.font-size-20.text-danger
+                                    | $
+                                    span=product.price
+                                    small.text-dark.font-size-12  Inclusive of all taxes
+                            tr.font-rale.font-size-14
+                                td You Save:
+                                td.font-size-16.text-danger
+                                    | $
+                                    span=product.price
+                        .d-flex
+                            .return.text-center.mr-5
+                                .font-size-20.my-2.color-second
+                                    span.fa.fa-retweet.border.p-3.rounded-pill
+                                a.font-rale.font-size-12(href='#')
+                                    | 10 Days
+                                    br
+                                    | Replacement
+                            .return.text-center.mr-5
+                                .font-size-20.my-2.color-second
+                                    span.fa.fa-truck.border.p-3.rounded-pill
+                                a.font-rale.font-size-12(href='#')
+                                    | Daily Tuition
+                                    br
+                                    | Deliverd
+                            .return.text-center.mr-5
+                                .font-size-20.my-2.color-second
+                                    span.fa.fa-check.border.p-3.rounded-pill
+                                a.font-rale.font-size-12(href='#')
+                                    | 1 Year
+                                    br
+                                    | Warranty
+                        hr
+                        #order-details.font-rale.d-flex.flex-column.text-dark
+                            small Delivery by: Mar 29 - Apr 1
+                            small
+                                | Sold by 
+                                a(href='#') Daily Electronics
+                                |  (45 out of 5 | 18,198 ratings)
+                            small
+                                i.fa.fa-map-marker
+                                |  Deliver to Customer - 424201
+                        .row
+                            .col-6
+                                .color.my-3
+                                    .d-flex.justify-content-between
+                                        h6.font-baloo Color
+                                        .color-yellow-bg.rounded-circle.p-2
+                                            button.btn.font-size-14
+                                        .color-second-bg.rounded-circle.p-2
+                                            button.btn.font-size-14
+                                        .color-primary-bg.rounded-circle.p-2
+                                            button.btn.font-size-14
+                            .col-6
+                                .qty.d-flex
+                                    h6.font-baloo Qty
+                                    .px-4.d-flex.font-rale
+                                    button.qty-up.border.bg-light(data-id='pro1')
+                                        i.fa.fa-angle-up
+                                    input.qty-input.border.px-2.w-50.bg-light(type='text', disabled='', value='1', placeholder='1')
+                                    button.qty-down.border.bg-light(data-id='pro2')
+                                        i.fa.fa-angle-down
+                        .size.my-3
+                            h6.font-baloo.font Size
+                            .d-flex.justify-content-between.w-75
+                                .font-rubik.border.p-2.mr-5
+                                    button.btn.p-0.font-size-14 4GB RAM
+                                .font-rubik.border.p-2.mr-5
+                                    button.btn.p-0.font-size-14 6GB RAM
+                                .font-rubik.border.p-2.mr-5
+                                    button.btn.p-0.font-size-14 8GB RAM
+                    .col-sm-12.pt-5
+                        h6.font-rubik Product decription
+                        hr
+                        p.font-rale.font-size-14
+                            | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat inventore vero numquam error est ipsa, consequuntur temporibus debitis nobis sit, delectus officia ducimus dolorum sed corrupti. Sapiente optio sunt provident, accusantium eligendi eius reiciendis animi? Laboriosam, optio qui? Numquam, quo fuga. Maiores minus, accusantium velit numquam a aliquam vitae vel?
+                        p.font-rale.font-size-14
+                            | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat inventore vero numquam error est ipsa, consequuntur temporibus debitis nobis sit, delectus officia ducimus dolorum sed corrupti. Sapiente optio sunt provident, accusantium eligendi eius reiciendis animi? Laboriosam, optio qui? Numquam, quo fuga. Maiores minus, accusantium velit numquam a aliquam vitae vel?

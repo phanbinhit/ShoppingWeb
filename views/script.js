@@ -60,4 +60,25 @@ $(document).ready(function(){
              }
          }
      });
+
+     //qty button
+     let $qtyUp = $(".qty-up");
+     let $qtyInput = $(".qty-input");
+     let $qtyDown = $(".qty-down");
+
+     $qtyUp.click(function(e) {
+         if($qtyInput.val() >=0 && $qtyInput.val() <=9) {
+             $qtyInput.val(function(i, oldVal) {
+                 return ++oldVal;
+             });
+         }
+     });
+
+     $qtyDown.click(function(e) {
+         if($qtyInput.val() >=1 && $qtyInput.val() <=10) {
+             $qtyInput.val(function(i, oldVal) {
+                 return --oldVal;
+             });
+         }
+     })
 })
