@@ -1,0 +1,197 @@
+{
+  "products": [
+    {
+      "id": "88mAAL9ms",
+      "pathImage": "./images/assets/products/s1.png",
+      "title": "Samsung Galaxy 10",
+      "author": "Samsung",
+      "price": 152
+    },
+    {
+      "id": "G8esRtSbjQ",
+      "pathImage": "./images/assets/products/s2.png",
+      "title": "Samsung Galaxy X",
+      "author": "Samsung",
+      "price": 152
+    },
+    {
+      "id": "c_XCofL9B8",
+      "pathImage": "./images/assets/products/s3.png",
+      "title": "Samsung Galaxy Y",
+      "author": "Samsung",
+      "price": 152
+    },
+    {
+      "id": "5tC6Ag7E5i",
+      "pathImage": "./images/assets/products/i1.png",
+      "title": "Iphone X",
+      "author": "Apple",
+      "price": 152
+    },
+    {
+      "id": "rlVVyVWnch",
+      "pathImage": "./images/assets/products/i2.png",
+      "title": "Iphone X Plus",
+      "author": "Apple",
+      "price": 152
+    },
+    {
+      "id": "gDDOCZvkzs",
+      "pathImage": "./images/assets/products/i3.png",
+      "title": "Iphone 12",
+      "author": "Apple",
+      "price": 152
+    },
+    {
+      "id": "1CpfJQiSbA",
+      "pathImage": "./images/assets/products/r1.png",
+      "title": "Redmi Note 5",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "0rJpQG5IDw",
+      "pathImage": "./images/assets/products/r2.png",
+      "title": "Redmi Note 6",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "ktCgu8vYog",
+      "pathImage": "./images/assets/products/r3.png",
+      "title": "Redmi Note 7",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "GK7E7gIMtl",
+      "pathImage": "./images/assets/products/r4.png",
+      "title": "Redmi Note 8",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "-k2IuQ7PIh",
+      "pathImage": "./images/assets/products/r5.png",
+      "title": "Redmi Note 9",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "C6BtAKb-Bk",
+      "pathImage": "./images/assets/products/r6.png",
+      "title": "Redmi Note X",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "RO5doT6afL",
+      "pathImage": "./images/assets/products/r7.png",
+      "title": "Redmi Note 7 Pro",
+      "author": "Redmi",
+      "price": 152
+    }
+  ],
+  "topsales": [
+    {
+      "id": "Z8AgMfg2Lf",
+      "pathImage": "./images/assets/products/s1.png",
+      "title": "Samsung Galaxy 10",
+      "author": "Samsung",
+      "price": 152
+    },
+    {
+      "id": "LQMjzI4hLq",
+      "pathImage": "./images/assets/products/s2.png",
+      "title": "Samsung Galaxy X",
+      "author": "Samsung",
+      "price": 152
+    },
+    {
+      "id": "zph8kTHsbr",
+      "pathImage": "./images/assets/products/i1.png",
+      "title": "Iphone X",
+      "author": "Apple",
+      "price": 152
+    },
+    {
+      "id": "wB4hZGsYcm5",
+      "pathImage": "./images/assets/products/i2.png",
+      "title": "Iphone X Plus",
+      "author": "Apple",
+      "price": 152
+    },
+    {
+      "id": "K-fvbFsAV72",
+      "pathImage": "./images/assets/products/r5.png",
+      "title": "Redmi Note 9",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "LWfnfVBD3K5",
+      "pathImage": "./images/assets/products/r6.png",
+      "title": "Redmi Note X",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "PBDZoAb6UWm",
+      "pathImage": "./images/assets/products/r7.png",
+      "title": "Redmi Note 7 Pro",
+      "author": "Redmi",
+      "price": 152
+    }
+  ],
+  "newphones": [
+    {
+      "id": "NRHSiIDF1U5",
+      "pathImage": "./images/assets/products/s1.png",
+      "title": "Samsung Galaxy 10",
+      "author": "Samsung",
+      "price": 152
+    },
+    {
+      "id": "bn3makn3r0b",
+      "pathImage": "./images/assets/products/s2.png",
+      "title": "Samsung Galaxy X",
+      "author": "Samsung",
+      "price": 152
+    },
+    {
+      "id": "iJ3q40Ialbn",
+      "pathImage": "./images/assets/products/i1.png",
+      "title": "Iphone X",
+      "author": "Apple",
+      "price": 152
+    },
+    {
+      "id": "rjrVyFmXNoa",
+      "pathImage": "./images/assets/products/i2.png",
+      "title": "Iphone X Plus",
+      "author": "Apple",
+      "price": 152
+    },
+    {
+      "id": "-SdZtP4D-9O",
+      "pathImage": "./images/assets/products/r5.png",
+      "title": "Redmi Note 9",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "KASHdEZPgcA",
+      "pathImage": "./images/assets/products/r6.png",
+      "title": "Redmi Note X",
+      "author": "Redmi",
+      "price": 152
+    },
+    {
+      "id": "lh5DqIwoFQa",
+      "pathImage": "./images/assets/products/r7.png",
+      "title": "Redmi Note 7 Pro",
+      "author": "Redmi",
+      "price": 152
+    }
+  ]
+}
