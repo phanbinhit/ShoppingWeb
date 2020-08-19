@@ -1,0 +1,50 @@
+extends ../layouts/layout
+
+block content
+    main#main-site
+        // Cart
+        section#cart.py-3
+            .container-fluid.w-75
+                h5.font-baloo.font-size-20 Shopping Cart
+                .row
+                    .col-sm-9.carts
+                        each cart in carts
+                            .row.border-top.py-3.mt-3
+                                .col-sm-2
+                                    img.img-fluid(src=cart.product.imagePath, alt='Product', style='height: 120px')
+                                .col-sm-8
+                                    h5.font-baloo.font-size-20=cart.product.title
+                                    small="by" + cart.product.author
+                                    .d-flex
+                                        .rating.text-warning.font-size-14
+                                            i.fa.fa-star
+                                            i.fa.fa-star
+                                            i.fa.fa-star
+                                            i.fa.fa-star
+                                            i.fa.fa-star
+                                        a.font-size-14.font-rale.px-2(href='#', style='color: #007bff') 20,534 ratings
+                                    .d-flex.q-ty.pt-2
+                                        .d-flex.font-rale.w-50
+                                            button.qty-up.btn.bg-light.border(data-id=cart.product.id)
+                                                i.fa.fa-angle-up
+                                            input.qty-input.bg-light.px-2.border.w-100(data-id=cart.product.id, type='text', disabled='', value=cart.number)
+                                            button.qty-down.btn.bg-light.border(data-id=cart.product.id)
+                                                i.fa.fa-angle-down
+                                        button.btn.text-danger(type='submit')
+                                            | Delete
+                                        button.btn.text-danger.border-left.rounded-0(type='submit')
+                                            | Save for Later
+                                .col-sm-2.text-right
+                                    .text-danger.font-baloo.font-size-20
+                                    | $
+                                    span.product-price=cart.product.newPrice
+                    .col-sm-3
+                        .border.text-center.py-3
+                            h6.font-size-12.font-rale.text-success
+                                i.fa.fa-check
+                                |   Your order is eligible for FREE Delivery
+                            .border-top.py-4
+                                div
+                                    h5#number-total.font-baloo.font-size-20
+                                    span#price-total.text-danger.h5
+                                button.btn.btn-warning.mt-3(type='submit') Proceed to Buy

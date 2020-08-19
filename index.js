@@ -1,9 +1,28 @@
+require('dotenv').config();
 const express = require('express');
-const db = require('./db');
 const bodyParser = require('body-parser');
-
+const mongoose = require('mongoose');
+const indexRoute = require('./router/index.route');
+const productRoute = require('./router/product.route');
+const authRoute = require('./router/auth.route');
+const cardRoute = require('./router/cart.route');
+const sessionMiddelware = require('./middelwares/session.middleware');
+const cookieParser = require('cookie-parser'); 
+const path = require('path');
 const app = express();
 
+
+//connect mongdb
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(function() {
+        console.log("Connected mongodb");
+    })
+    .catch(function(err) {
+        console.log(err);
+    });
+
+app.use(cookieParser(process.env.SESSION_SECRET));
+app.use(sessionMiddelware);
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true }));
 //set view engine
@@ -13,29 +32,11 @@ app.set('views', './views');
 //set static link
 app.use(express.static("public"));
 app.use(express.static("views"));
-
-app.get('/product/:id', function(req, res) {
-    var id = req.params.id
-    var product = db.get('products').find({ id: id }).value();
-    res.render('products/product', {product: product});
-})
-
-app.get('/', function(req, res) {
-    var topsales = [];
-    var newphones = [];
-    var products = db.get('products').value();
-    for (var i = 0; i < products.length; i++) {
-        if (products[i].type.indexOf(1) !== -1) {
-            topsales.push(products[i]);
-        }
-
-        if (products[i].type.indexOf(2) !== -1) {
-            newphones.push(products[i]);
-        }
-    }
-    console.log(newphones);
-    res.render('index', {products: products, topsales: topsales, newphones: newphones});
-});
+app.use(express.static(path.resolve('./db.js')));
+app.use(express.static(__dirname + ""));
+app.use('/', indexRoute);
+app.use('/product', productRoute);
+app.use('/cart', cardRoute);
 
 app.listen(3000, function() {
     console.log("Listening server in port 3000");

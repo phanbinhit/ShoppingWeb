@@ -1,4 +1,4 @@
-extends ./layouts/layout
+extends ../layouts/layout
 
 block content  
     section#banner-area
@@ -19,7 +19,7 @@ block content
                     .item.py-2
                         .product
                         a(href='/product/' + product.id)
-                            img.img-fluid(src=product.pathImage, alt='product1')
+                            img.img-fluid(src=product.imagePath, alt='product1')
                         .text-center
                             h6=product.title
                             .rating.text-warning.font-size-12
@@ -29,8 +29,8 @@ block content
                                 i.fa.fa-star
                                 i.fa.fa-star
                             .price.py-2
-                                span="$"+product.price
-                            button.btn.btn-warning.font-size-12(type='submit') Add to Cart
+                                span="$"+product.newPrice
+                            a.btn.btn-warning.font-size-12(href='/cart/add/' + product.id) Add to Cart
     section#special-price
         .container
             h4.font-rubik.font-size-20 All Products
@@ -46,7 +46,7 @@ block content
                         .item.py-2(style='width: 200px')
                             .product.font-rale
                                 a(href='/product/' + product.id)
-                                    img.img-fluid(src=product.pathImage, alt='product1')
+                                    img.img-fluid(src=product.imagePath, alt='product1')
                                 .text-center
                                     h6=product.title
                                     .rating.text-warning.font-size-12
@@ -56,8 +56,8 @@ block content
                                         i.fa.fa-star
                                         i.fa.fa-star
                                     .price.py-2
-                                        span="$"+product.price
-                                    button.btn.btn-warning.font-size-12(type='submit') Add to Cart
+                                        span="$"+product.newPrice
+                                    a.btn.btn-warning.font-size-12(href='/cart/add/' + product.id) Add to Cart
     section#new-phones
         .container.py-5
             h4.font-rubik.font-size-20 New phone
@@ -68,7 +68,7 @@ block content
                     .item.py-2
                         .product
                         a(href='/product/' + product.id)
-                            img.img-fluid(src=product.pathImage, alt='product1')
+                            img.img-fluid(src=product.imagePath, alt='product1')
                         .text-center
                             h6=product.title
                             .rating.text-warning.font-size-12
@@ -78,8 +78,8 @@ block content
                                 i.fa.fa-star
                                 i.fa.fa-star
                             .price.py-2
-                                span="$"+product.price
-                            button.btn.btn-warning.font-size-12(type='submit') Add to Cart
+                                span="$"+product.newPrice
+                            a.btn.btn-warning.font-size-12(href='/cart/add/' + product.id) Add to Cart
     section#banner-adds
         .container.py-5.text-center
             img.px-2.img-fluid(src='/images/assets/banner1-cr-500x150.jpg', alt='BannerAdd1')

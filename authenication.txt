@@ -1,0 +1,23 @@
+-userSchema: 
+	name {
+		type: String, 
+		required: true
+	},
+	email,
+	password,
+	date: {
+		type: Date,
+		default: Date.now
+	}
+
+-Invalid register
+	+Check require field
+	+Check password match
+	+Check password length
+	+Check user exist
+	+Use bcriptjs to hash password
+-Session middleware
+	+express-session
+-Connect connect-flash
+-Login authenication:
+	+passport-local

@@ -61,24 +61,69 @@ $(document).ready(function(){
          }
      });
 
-     //qty button
-     let $qtyUp = $(".qty-up");
-     let $qtyInput = $(".qty-input");
-     let $qtyDown = $(".qty-down");
+    let btnUp =  $('.qty-up');
+    let btnDown = $('.qty-down');
 
-     $qtyUp.click(function(e) {
-         if($qtyInput.val() >=0 && $qtyInput.val() <=9) {
-             $qtyInput.val(function(i, oldVal) {
-                 return ++oldVal;
-             });
-         }
-     });
+    btnUp.on('click', function(event) {
+        console.log('click up');
+        let input = $('.qty-input[data-id='+$(this).data("id")+']');
+        input.val((index, oldVal) => {
+            return ++oldVal;
+        });
 
-     $qtyDown.click(function(e) {
-         if($qtyInput.val() >=1 && $qtyInput.val() <=10) {
-             $qtyInput.val(function(i, oldVal) {
-                 return --oldVal;
-             });
-         }
-     })
-})
+        total();
+
+        $.ajax({
+            url: '/cart/update/'+ $(this).data("id") +'',
+            type: 'POST',
+            data: {
+                value: input.val()
+            }
+        })
+    });
+
+    btnDown.on('click', function(event) {
+        console.log('click Down');
+        let input = $('.qty-input[data-id='+$(this).data("id")+']');
+        input.val((index, oldVal) => {
+            return --oldVal;
+        });
+
+        total();
+
+        $.ajax({
+            url: '/cart/update/'+ $(this).data("id") +'',
+            type: 'POST',
+            data: {
+                value: input.val()
+            }
+        })
+    })
+
+    total();
+
+    function total() {
+        let total = 0;
+        let prices = [];
+        let numbers = [];
+        let numberItem = 0;
+        $('.product-price').each(function(index) {
+            prices.push(parseInt($(this).text()));
+        });
+
+        $('.qty-input').each(function(index) {
+            numbers.push(parseInt($(this).val()));
+        });
+        
+        for (let i = 0; i < prices.length; i++) {
+            numberItem += numbers[i];
+            total += prices[i] * numbers[i];
+        }
+    
+        $('#number-total').html(`Subtotal(${numberItem} items): `)
+        $('#price-total').html(`$${total}`);
+    }
+});
+
+
+
